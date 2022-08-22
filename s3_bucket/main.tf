@@ -32,6 +32,10 @@ resource "aws_s3_bucket" "auth0_bucket" {
       }
     }
   }
+  
+  tags = {
+    environment = dev
+  }
 
   #logging {
   #  target_bucket = aws_s3_bucket.log_bucket.id
